@@ -1,0 +1,12 @@
+{
+  "name": "notes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Lucifer",
+  "license": "MIT",
+  "scripts": {
+    "build": "vuepress build ./",
+    "dev": "vuepress dev ./",
+    "wiki": "vuepress dev wiki"
+  }
+}
