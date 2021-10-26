@@ -1,3 +1,4 @@
 .vuepress/dist/*
 wiki/.vuepress/dist/*
 .obsidian/*
+.env
