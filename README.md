@@ -45,17 +45,17 @@ footer:
 
 本节内容主要参考《数据结构导论》《漫画算法》《算法导论》《编程珠玑》
 
-- [算法概述](./data-structure/algorithm-overview.md)
+- [算法概述](./science/data-structure/algorithm-overview.md)
 
-- [数据结构基础](./data-structure/data-structure.md)
+- [数据结构基础](./science/data-structure/data-structure.md)
 
-- [树](./data-structure/tree.md)
+- [树](./science/data-structure/tree.md)
 
-- [排序算法](./data-structure/sort-algo.md)
+- [排序算法](./science/data-structure/sort-algo.md)
 
-- [面试常见算法](./data-structure/aigo-interview.md)
+- [面试常见算法](./science/data-structure/aigo-interview.md)
 
-- [算法的实际应用](./data-structure/aigo-apply.md)
+- [算法的实际应用](./science/data-structure/aigo-apply.md)
 
 
 
@@ -63,5 +63,5 @@ footer:
 
 ## Redis
 
-- 《Redis设计与实现》本系列均为阅读同名书籍，加上自己的理解，撰写的文档，如果有不正之处，敬请指出。
-  - [c语言字符串与redis字符串](./redis/design/data_type/sds.md)
+《Redis设计与实现》本系列均为阅读同名书籍，加上自己的理解，撰写的文档，如果有不正之处，敬请指出。
+- [c语言字符串与redis字符串](./middleware/redis/design/data_type/sds.md)
