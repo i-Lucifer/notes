@@ -68,3 +68,6 @@ footer:
 - [链表](./middleware/redis/design/data_type/sds.md)
 - [链表](./middleware/redis/design/data_type/list_node.md)
 - [字典](./middleware/redis/design/data_type/dict.md)
+
+
+[Redis面试相关](./middleware/redis/interview.md)
