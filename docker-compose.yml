@@ -9,15 +9,7 @@ services:
     volumes:
       - .:/docs
     command: ["yarn","dev"]
-
-  # vuepress:
-  #   container_name: vuepress
-  #   image: easyunit/vuepress:yarn
-  #   ports:
-  #     - 10080:8080
-  #   volumes:
-  #     - .:/docs
-  #   command: ["tail","-f","/dev/null"]
+    # command: ["tail","-f","/dev/null"]
 
   # vue-nginx:
   #   container_name: vue-nginx
