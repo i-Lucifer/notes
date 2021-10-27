@@ -31,6 +31,11 @@ footer:
 # ↓↓↓↓↓ 下面的是正文
 ---
 
+## 推荐书籍
+
+- 计算机神作《编码：隐匿在计算机软硬件背后的语言》、以及B站对它的速读[读懂这本书，你就能手工自制CPU](https://www.bilibili.com/video/BV1NR4y1n7yj?spm_id_from=333.999.0.0)
+- 《码农翻身》《半小时漫画计算机》
+
 <!-- ## 计算机基础学科
 
 ### 计算机操作系统
@@ -45,17 +50,17 @@ footer:
 
 本节内容主要参考《数据结构导论》《漫画算法》《算法导论》《编程珠玑》
 
-- [算法概述](./science/data-structure/algorithm-overview.md)
+<!-- - [算法概述](./science/data-structure/algorithm-overview.md)  -->
 
 - [数据结构基础](./science/data-structure/data-structure.md)
 
-- [树](./science/data-structure/tree.md)
+<!--  - [树](./science/data-structure/tree.md)
 
 - [排序算法](./science/data-structure/sort-algo.md)
 
 - [面试常见算法](./science/data-structure/aigo-interview.md)
 
-- [算法的实际应用](./science/data-structure/aigo-apply.md)
+- [算法的实际应用](./science/data-structure/aigo-apply.md)  -->
 
 
 
