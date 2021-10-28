@@ -65,8 +65,12 @@ footer:
 
 
   
-
 ## Redis
 
 《Redis设计与实现》本系列均为阅读同名书籍，加上自己的理解，撰写的文档，如果有不正之处，敬请指出。
 - [c语言字符串与redis字符串](./middleware/redis/design/data_type/sds.md)
+
+
+## golang
+数据类型
+- [管道](./go/data_type/channel.md)
