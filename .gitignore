@@ -3,3 +3,5 @@ wiki/.vuepress/dist/*
 .obsidian/*
 .env
 nohup.out
+.idea
+node_modules/*
