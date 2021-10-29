@@ -8,7 +8,7 @@
 
 ### 数据结构
 
-- 管道的底层结构是循环队列
+- 管道的底层结构是循环链表
 - 下面的数据结构位于/src/runtime/chan.go
 
 ```go
@@ -46,5 +46,6 @@ type waitq struct {
 ## 常见用法
 
 - 单向管道
+- 信号 chan + 空 struct
 - select
 - for-range 循环消费
