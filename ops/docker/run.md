@@ -56,7 +56,7 @@ docker run -ti --name centos centos:latest /bin/bash
   | -ti    | 启动容器，进入终端交互，并且能够标准输入，关闭窗口或者exit，容器会stop |
   | -i     | 比上面少了终端，能交互，但是看起来怪怪的                     |
   | -t     | 进入了终端，但是不能交互，使用exec进入后，能够正常交互       |
-  | -d     | docker run -d --name centos centos:latest /bin/bash 执行完容器就停止了，且无法启动，和/bin/echo "Hello world"一样，属于一次性任务</br>以下两种持续任务</br>docker run -d --name centos centos:latest /bin/bash -c "while true; do echo hello world; sleep 1; done" </br>docker run -d --name centos centos:latest /bin/bash -c "tail -f /dev/null" |
+  | -d     | docker run -d --name centos centos:latest /bin/bash 执行完容器就停止了，且无法启动，和/bin/echo "Hello world"一样，属于一次性任务</br>以下两种持续任务，-c表示后面的语句是一个整体</br>docker run -d --name centos centos:latest /bin/bash -c "while true; do echo hello world; sleep 1; done" </br>docker run -d --name centos centos:latest /bin/bash -c "tail -f /dev/null" |
   | -d组合 | -tid、-td、-id生成的容器均会后台守护运行，返回一个容器ID     |
 
   
