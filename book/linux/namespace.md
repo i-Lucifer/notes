@@ -14,14 +14,14 @@
 
 - Linux一共实现了6种不同类型的Namespace
 
-  | 类型                         | 系统调用参数(请忽略第二个下划线，为阅读方便添加) | 内核版本 |
-  | ---------------------------- | ------------------------------------------------ | -------- |
-  | Mount N(Namespace缩写，下同) | CLONE_NEW_NS                                     | 2.4.19   |
-  | UTS N                        | CLONE_NEW_UTS                                    | 2.6.19   |
-  | IPC N                        | CLONE_NEW_IPC                                    | 2.6.19   |
-  | PID N                        | CLONE_NEW_PID                                    | 2.6.24   |
-  | Network N                    | CLONE_NEW_NET                                    | 2.6.29   |
-  | User N                       | CLONE_NEW_USER                                   | 3.8      |
+  |          | 类型                         | 系统调用参数(请忽略第二个下划线，为阅读方便添加) | 内核版本 |
+  | -------- | ---------------------------- | ------------------------------------------------ | -------- |
+  | 磁盘相关 | Mount N(Namespace缩写，下同) | CLONE_NEW_NS                                     | 2.4.19   |
+  |          | UTS N                        | CLONE_NEW_UTS                                    | 2.6.19   |
+  | 进程相关 | IPC N                        | CLONE_NEW_IPC                                    | 2.6.19   |
+  | 进程相关 | PID N                        | CLONE_NEW_PID                                    | 2.6.24   |
+  | 网络相关 | Network N                    | CLONE_NEW_NET                                    | 2.6.29   |
+  | 用户相关 | User N                       | CLONE_NEW_USER                                   | 3.8      |
 
 - Namespace的Api主要使用如下3个系统调用
 
