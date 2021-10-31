@@ -5,7 +5,7 @@
 ## Namespace 基础概念
 
 - Linux Namespace 是 Kernel的一个功能(IO多路复用里的epoll模型，好像也是内核功能吧)
-- 可以隔离系统资源、PID(Process ID)、User ID、Network等。像chroot允许把一个目录变成根目录(不知道这是啥，忽略这个例子吧)
+- 可以隔离系统资源、PID(Process ID)、User ID、Network等。像chroot允许把一个目录变成根目录(看过chroot章节，其实也不需要这个例子)
 - 场景举例 (UserID)
   - 高性能服务器给多个应用使用时，可能产生误操作。
   - 可以隔离权限，防止误操作
