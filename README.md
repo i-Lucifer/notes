@@ -74,9 +74,12 @@ footer:
 
 ## golang
 数据类型
+- iota iota的本质是常量表遍历的索引
 - [管道](./go/data_type/channel.md)
 - [渐进式rehash](./go/data_type/map.md)
+协程
+- [协程、调度模型、调度策略](./go/routine/routine.md)
 
-
-## 容器
+## 容器与容器编排
 ### [docker](./ops/docker/docker.md)
+### [k8s](./ops/k8s/k8s.md)
