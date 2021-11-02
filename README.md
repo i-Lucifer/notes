@@ -80,6 +80,10 @@ footer:
 - [渐进式rehash](./go/data_type/map.md)
 协程
 - [协程、调度模型、调度策略](./go/routine/routine.md)
+异常处理
+- [defer](./go/exception_handle/defer.md)
+- [panic](./go/exception_handle/panic.md)
+- [recover](./go/exception_handle/recover.md)
 
 ## 容器与容器编排
 ### [docker](./ops/docker/docker.md)
