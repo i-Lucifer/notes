@@ -20,8 +20,8 @@
 
 资源范围：CPU、内存、存储、网络等
 
-### cgourps三个组件
-- cgroup
+### 三个组件介绍(挖坑 待填)
+
 - subsystem
 - hierarchy
 
