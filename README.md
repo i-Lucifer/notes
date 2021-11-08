@@ -25,7 +25,7 @@ home: true
 
 # 页脚设置
 footer: 
-    Copyright © 2021 Lucifer  豫ICP备2021024610号
+    Copyright © 2021 Lucifer By VuePress  豫ICP备2021024610号
 
 
 # ↓↓↓↓↓ 下面的是正文
