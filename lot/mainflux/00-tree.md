@@ -1,11 +1,3 @@
-├── 00-dir.md
-├── 00-tree.md
-├── 01-overview.md
-├── 02-arch.md
-├── 
-├── 03-intro.md
-└── 04-config.md
-
 ## 说明
 - 本文档基本是对mainflux文档的实践以及结果粘贴，建议阅读官方文档
 ## 目录
