@@ -65,3 +65,12 @@ mainflux-cli messages send c00bdcce-6898-4d1c-9959-534ef77120c6 '[{"bn":"some-ba
 
 # ok
 ```
+
+## 补充说明
+
+- 根据后面的操作，我们大概得到一些信息
+- 创建的things和channel要连接才能发消息，上面的测试命令推测已经连接
+- 发消息时，数据结构主要分
+  - channel_id，消息通道
+  - things_id 发送者，物(品)
+  - 消息

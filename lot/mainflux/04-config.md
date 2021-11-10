@@ -253,7 +253,7 @@ curl -s -S -i --cacert docker/ssl/certs/ca.crt -X POST -H "Content-Type: applica
 curl -s -S -i --cacert docker/ssl/certs/ca.crt -X DELETE -H "Authorization: <user_auth_token>" https://localhost/things/<thing_id>
 ```
 
-- 执行结果 删除成功
+- 执行结果 删除成功(这里可能是误写，因为再次操作时，无论如何都是204)
 
 ```yaml
 HTTP/2 200 
@@ -277,13 +277,99 @@ access-control-expose-headers: Location
 
 - 相关接口可能会被bulk批量操作接口替换
 
-#### 增
+#### 增 添加一个channel
 
-#### 删
+```
+curl -s -S -i --cacert docker/ssl/certs/ca.crt -X POST -H "Content-Type: application/json" -H "Authorization: <user_auth_token>" https://localhost/channels -d '{"name":"mychan"}'
+```
 
-#### 改
+- 执行结果
 
-#### 查
+```yaml
+HTTP/2 201 
+server: nginx/1.20.0
+date: Wed, 10 Nov 2021 01:45:44 GMT
+content-type: application/json
+content-length: 0
+# 得到channel_id
+location: /channels/deed683b-92e7-4597-ae44-42a54885ff83
+warning-deprecated: This endpoint will be depreciated in v1.0.0. It will be replaced with the bulk endpoint currently found at /channels/bulk.
+access-control-expose-headers: Location
+```
+
+#### 增 批量添加channel
+
+```bash
+curl -s -S -i --cacert docker/ssl/certs/ca.crt -X POST -H "Content-Type: application/json" -H "Authorization: <user_auth_token>" https://localhost/channels/bulk -d '[{"name":"joe"},{"name":"betty"}]'
+```
+
+- 执行结果
+
+```json
+{
+    "channels": [
+        {
+            "id": "389e180b-7bff-4e0f-8ea0-dcd2a483f066",
+            "name": "joe"
+        },
+        {
+            "id": "bc02855b-a867-4a21-ab77-be16dbf0d2a1",
+            "name": "betty"
+        }
+    ]
+}
+```
+
+#### 查 查看渠道
+
+- 获取指定用户下相关的channel
+
+```yaml
+# 普通查询
+curl -s -S -i --cacert docker/ssl/certs/ca.crt -H "Authorization: <user_auth_token>" https://localhost/channels
+
+# 分页查询 同样，测试时，只有前面的参数会生效
+curl -s -S -i --cacert docker/ssl/certs/ca.crt -H "Authorization: <user_auth_token>" https://localhost/channels?offset=0&limit=5
+```
+
+- 执行结果
+
+```json
+{
+    "total": 2,
+    "offset": 0,
+    "limit": 10,
+    "order": "",
+    "direction": "",
+    "channels": [
+        {
+            "id": "eefb6ce4-e4c0-4db9-a550-4b44705c85c9",
+            "name": "mychan"
+        },
+        {
+            "id": "deed683b-92e7-4597-ae44-42a54885ff83",
+            "name": "mychan"
+        }
+    ]
+}
+```
+
+#### 删 删除一个channel
+
+- 查询语句
+
+```yaml
+curl -s -S -i --cacert docker/ssl/certs/ca.crt -X DELETE -H "Authorization: <user_auth_token>" https://localhost/channels/<channel_id>
+```
+
+- 执行结果 以及再次执行结果
+
+```yaml
+HTTP/2 204 
+server: nginx/1.20.0
+date: Wed, 10 Nov 2021 01:56:56 GMT
+access-control-expose-headers: Location
+```
 
 ### 访问控制
 
@@ -293,19 +379,67 @@ access-control-expose-headers: Location
 
 - 相关接口可能会被bulk批量操作接口替换
 
-#### 连接things到channel
+#### 增 连接things到channel
 
 ```json
 curl -s -S -i --cacert docker/ssl/certs/ca.crt -X PUT -H "Authorization: <user_auth_token>" https://localhost/channels/<channel_id>/things/<thing_id>
 ```
 
-#### 连接多个things到channel
+- 执行结果
 
-```json
+```
+HTTP/2 200 
+server: nginx/1.20.0
+date: Wed, 10 Nov 2021 02:06:33 GMT
+content-type: application/json
+content-length: 0
+warning-deprecated: This endpoint will be depreciated in v1.0.0. It will be replaced with the bulk endpoint found at /connect.
+access-control-expose-headers: Location
+```
+
+- 再次执行结果
+
+```
+HTTP/2 409 
+server: nginx/1.20.0
+date: Wed, 10 Nov 2021 02:06:43 GMT
+content-type: application/json
+content-length: 34
+# 注意这里的注释，实体已经存在
+{"error":"entity already exists"}
+```
+
+#### 增 连接多个things到channel
+
+```yaml
+# 注意参数的引号，键值对请使用双引号
 curl -s -S -i --cacert docker/ssl/certs/ca.crt -X POST -H "Content-Type: application/json" -H "Authorization: <user_auth_token>" https://localhost/connect -d '{"channel_ids":["<channel_id>", "<channel_id>"],"thing_ids":["<thing_id>", "<thing_id>"]}'
 ```
 
-#### 查看channel和things的连接关系
+- 执行结结果
+
+```
+HTTP/2 200 
+server: nginx/1.20.0
+date: Wed, 10 Nov 2021 06:57:40 GMT
+content-type: application/json
+content-length: 0
+access-control-expose-headers: Location
+```
+
+- 如果已经有连接关系，则会409，并且所有绑定不执行
+
+```
+HTTP/2 409 
+server: nginx/1.20.0
+date: Wed, 10 Nov 2021 06:58:32 GMT
+content-type: application/json
+content-length: 34
+
+{"error":"entity already exists"}
+```
+
+#### 查 查看channel和things的连接关系
 
 - 指定channels
 
@@ -313,8 +447,32 @@ curl -s -S -i --cacert docker/ssl/certs/ca.crt -X POST -H "Content-Type: applica
 # 和channel连接的things
 curl -s -S -i --cacert docker/ssl/certs/ca.crt -H "Authorization: <user_auth_token>" https://localhost/channels/<channel_id>/things
 
-# 和channel非连接的things
+# 和channel非连接的things 测试的好像未生效
 curl -s -S -i --cacert docker/ssl/certs/ca.crt -H "Authorization: <user_auth_token>" https://localhost/channels/<channel_id>/things?connected=false
+```
+
+- 执行结果
+
+```json
+{
+    "total": 2,
+    "offset": 0,
+    "limit": 10,
+    "order": "",
+    "direction": "",
+    "things": [
+        {
+            "id": "ca26bffc-ecb6-4c21-ad32-f599f15961a0",
+            "name": "weio",
+            "key": "a01203e8-ab06-41f5-ae9c-5ea95f238e1e"
+        },
+        {
+            "id": "acae78fc-fc9f-44da-9640-990dc3e5e12b",
+            "name": "bob",
+            "key": "4d936cf9-571a-4652-9699-1dfd2442ad4d"
+        }
+    ]
+}
 ```
 
 - 指定things
@@ -327,10 +485,53 @@ curl -s -S -i --cacert docker/ssl/certs/ca.crt -H "Authorization: <user_auth_tok
 curl -s -S -i --cacert docker/ssl/certs/ca.crt -H "Authorization: <user_auth_token>" https://localhost/things/<thing_id>/channels?connected=false
 ```
 
-#### 断开连接
+- 执行结果
+
+```json
+{
+    "total": 2,
+    "offset": 0,
+    "limit": 10,
+    "order": "",
+    "direction": "",
+    "channels": [
+        {
+            "id": "4150647e-c581-4321-86e9-3e5bd1c2d2a2",
+            "name": "mychan"
+        },
+        {
+            "id": "389e180b-7bff-4e0f-8ea0-dcd2a483f066",
+            "name": "joe"
+        }
+    ]
+}
+```
+
+#### 删 断开连接
 
 ```yaml
 curl -s -S -i --cacert docker/ssl/certs/ca.crt -X DELETE -H "Authorization: <user_auth_token>" https://localhost/channels/<channel_id>/things/<thing_id>
+```
+
+- 执行结果
+
+```
+HTTP/2 204 
+server: nginx/1.20.0
+date: Wed, 10 Nov 2021 07:09:10 GMT
+access-control-expose-headers: Location
+```
+
+- 再次执行结果
+
+```
+HTTP/2 404 
+server: nginx/1.20.0
+date: Wed, 10 Nov 2021 07:09:12 GMT
+content-type: application/json
+content-length: 32
+
+{"error":"non-existent entity"}
 ```
 
 ### 配置服务
