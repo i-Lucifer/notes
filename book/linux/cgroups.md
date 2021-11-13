@@ -23,7 +23,7 @@
 ### cgourps三个组件
 - cgroup
 - subsystem
-- hierarchy
+- hierarchy 层次结构(树结构)
 
 ### [cgroups命令行实践](./cgroup-cli.md)
 
