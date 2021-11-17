@@ -63,6 +63,8 @@ footer:
 
 - [算法的实际应用](./science/data-structure/aigo-apply.md)  -->
 
+- 排序算法
+    - [链表反转](./science/algorithm/list-reverse.md)
 
 
   
