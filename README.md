@@ -91,4 +91,4 @@ footer:
 
 
 ## 物联网 loT(Internet of Things)
-- [mainflux框架](./lot/mainflux/00-tree.md)
+- [MQTT协议](./lot/protocol/tree.md)
