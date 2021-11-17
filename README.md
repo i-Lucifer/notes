@@ -33,7 +33,7 @@ footer:
 
 ## 书单
 易懂书籍
-- 计算机神作《编码：隐匿在计算机软硬件背后的语言》、以及B站对它的速读[读懂这本书，你就能手工自制CPU](https://www.bilibili.com/video/BV1NR4y1n7yj?spm_id_from=333.999.0.0)、
+- 《编码：隐匿在计算机软硬件背后的语言》 计算机神作、以及B站对它的速读[读懂这本书，你就能手工自制CPU](https://www.bilibili.com/video/BV1NR4y1n7yj?spm_id_from=333.999.0.0)、
 - 《码农翻身》《半小时漫画计算机》
 - 《Redis资深历险》
 
