@@ -81,12 +81,43 @@ footer:
 - iota iota的本质是常量表遍历的索引
 - [管道](./go/data_type/channel.md)
 - [渐进式rehash](./go/data_type/map.md)
+- [字符串](./go/data_type/string.md)
+- [数组和切片](./go/data_type/slice.md)
+- [结构体](./go/data_type/struct.md)
+控制结构
+- select
+- for-range
 协程
 - [协程、调度模型、调度策略](./go/routine/routine.md)
+内存管理
+- [内存分配]
+- [垃圾回收]
+- [逃逸分析]
+并发控制
+- channel
+- WaitGroup
+- context
+- mutex
+- RWMutex
+反射
+- 接口与反射定律
+测试相关
+- 单元测试
+- 基准测试
 异常处理
 - [defer](./go/exception_handle/defer.md)
 - [panic](./go/exception_handle/panic.md)
 - [recover](./go/exception_handle/recover.md)
+定时器
+- 一次性定时器Timer
+- 周期性定时器Ticker
+
+版本管理
+依赖管理
+
+语言特性
+- 语法糖
+- 语言陷阱
 
 ## 容器与容器编排
 ### [docker](./ops/docker/docker.md)
