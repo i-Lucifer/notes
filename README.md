@@ -67,7 +67,8 @@ footer:
     - [链表反转](./science/algorithm/list-reverse.md)
 
 
-  
+## 缓存
+
 ## Redis
 
 《Redis设计与实现》本系列均为阅读同名书籍，加上自己的理解，撰写的文档，如果有不正之处，敬请指出。
@@ -94,3 +95,7 @@ footer:
 
 ## 物联网 loT(Internet of Things)
 - [MQTT协议](./lot/protocol/tree.md)
+
+
+## 版本控制
+- [git](./dev/git/README.md)
