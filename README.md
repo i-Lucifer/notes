@@ -84,6 +84,9 @@ footer:
 - [字符串](./go/data_type/string.md)
 - [数组和切片](./go/data_type/slice.md)
 - [结构体](./go/data_type/struct.md)
+
+(这一条不太清楚是否应该归为数据类型)
+- [接口](./go/data_type/interface.md)
 控制结构
 - select
 - for-range
