@@ -5,3 +5,4 @@ wiki/.vuepress/dist/*
 nohup.out
 .idea
 node_modules/*
+*.DS_Store
