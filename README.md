@@ -38,6 +38,9 @@ footer:
 - 《编程珠玑》
 - 《Redis资深历险》
 
+## 缓存
+- [数据一致性问题](./middleware/cache/data-consistency.md)
+
 ## Redis
 
 《Redis设计与实现》本系列均为阅读同名书籍，加上自己的理解，撰写的文档，如果有不正之处，敬请指出。
