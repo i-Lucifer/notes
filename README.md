@@ -47,27 +47,8 @@ footer:
 
 ### 计算机网络 -->
 
-### 数据结构与算法
-
-本节内容主要参考《数据结构导论》《漫画算法》《算法导论》《编程珠玑》
-
-<!-- - [算法概述](./science/data-structure/algorithm-overview.md)  -->
-
-- [数据结构基础](./science/data-structure/data-structure.md)
-
-<!--  - [树](./science/data-structure/tree.md)
-
-- [排序算法](./science/data-structure/sort-algo.md)
-
-- [面试常见算法](./science/data-structure/aigo-interview.md)
-
-- [算法的实际应用](./science/data-structure/aigo-apply.md)  -->
-
-- 排序算法
-    - [链表反转](./science/algorithm/list-reverse.md)
-
-
 ## 缓存
+- [数据一致性问题](./middleware/redis/qa/data-consistency.md)
 
 ## Redis
 
