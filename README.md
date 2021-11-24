@@ -47,15 +47,12 @@ footer:
 
 ### 计算机网络 -->
 
-## 缓存
-- [数据一致性问题](./middleware/redis/qa/data-consistency.md)
 
 ## Redis
 
 《Redis设计与实现》本系列均为阅读同名书籍，加上自己的理解，撰写的文档，如果有不正之处，敬请指出。
 - [c语言字符串与redis字符串](./middleware/redis/design/data_type/sds.md)
 - 渐进式rehash 待更新
-
 
 ## golang
 数据类型
@@ -66,42 +63,13 @@ footer:
 - [数组和切片](./go/data_type/slice.md)
 - [结构体](./go/data_type/struct.md)
 
-(这一条不太清楚是否应该归为数据类型)
-- [接口](./go/data_type/interface.md)
-控制结构
-- select
-- for-range
 协程
 - [协程、调度模型、调度策略](./go/routine/routine.md)
-内存管理
-- [内存分配]
-- [垃圾回收]
-- [逃逸分析]
-并发控制
-- channel
-- WaitGroup
-- context
-- mutex
-- RWMutex
-反射
-- 接口与反射定律
-测试相关
-- 单元测试
-- 基准测试
+
 异常处理
 - [defer](./go/exception_handle/defer.md)
 - [panic](./go/exception_handle/panic.md)
-- [recover](./go/exception_handle/recover.md)
-定时器
-- 一次性定时器Timer
-- 周期性定时器Ticker
-
-版本管理
-依赖管理
-
-语言特性
-- 语法糖
-- 语言陷阱
+- recover 待更新
 
 ## 容器与容器编排
 ### [docker](./ops/docker/docker.md)
@@ -114,3 +82,6 @@ footer:
 
 ## 版本控制
 - [git](./dev/git/README.md)
+
+## 区块链
+- [区块链](./blockchain/README.md)
