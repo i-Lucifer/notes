@@ -74,8 +74,8 @@ footer:
 
 
 ## 版本控制
-- [git知识汇总](./dev/git/intro.md)
-- [git目录](./dev/git/tree.md)
+- [目录](./dev/vc/tree.md)
+- [git知识汇总](./dev/vc/intro.md)
 
 ## 区块链
 - [区块链](./blockchain/intro.md)
