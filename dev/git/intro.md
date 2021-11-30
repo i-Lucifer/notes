@@ -95,7 +95,7 @@
 
 ```bash
 # 初始化
-
+git submodule add
 # 使用者
 git clone 主项目
 git submodule update --init --recursive   # 递归初始化
