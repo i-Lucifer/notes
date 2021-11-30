@@ -29,13 +29,16 @@
 | 分类     | 作用                                                         | git命令                              | 其他说明                                                     |
 | -------- | ------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------ |
 | 初始化   | 克隆                                                         | clone --depth                        | 克隆指定深度的 commit                                        |
+|          | 压缩                                                         | reset –soft HEAD~N &&                | 压缩提交                                                     |
+| 团队协作 | 回滚                                                         | revert                               |                                                              |
 |          |                                                              |                                      |                                                              |
 | 标签管理 | 增                                                           | tag 版本                             |                                                              |
 |          | 删                                                           | tag -d 版本                          |                                                              |
 |          | 推                                                           | push origin --tags                   |                                                              |
 |          |                                                              |                                      |                                                              |
 | 排查     | 查找                                                         | grep 字符串                          | 不用切换分支，查到出现字符串的文件                           |
-| 排查     | [二分法排错](http://www.ruanyifeng.com/blog/2018/12/git-bisect.html) | bisect start [最近的版本] [早期版本] | 进入二分法拍错，假定100次提交，会切换到50                    |
+| 回归排查 | [二分法排错](http://www.ruanyifeng.com/blog/2018/12/git-bisect.html) | bisect start [最近的版本] [早期版本] | 进入二分法拍错，假定100次提交，会切换到50                    |
+|          |                                                              |                                      |                                                              |
 |          |                                                              | bisect good                          | 标记正常，自动切换到75                                       |
 |          |                                                              | bisect bad                           | 标记异常，自动切换到62                                       |
 |          |                                                              | bisect reset                         | 退出查错                                                     |
@@ -99,21 +102,7 @@ git submodule update --recursive					# 递归更新
 git submodule update --remote							# 更新依赖 子项目
 ```
 
-
-
-
-
-
-
 ### 其他
-
-#### 忽略文件ignore
-
-#### 回滚提交
-
-```
-git revert
-```
 
 #### 关联远程空仓库
 
