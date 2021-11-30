@@ -13,8 +13,8 @@
 
 ```go
 type hchan struct {
-	qcount   uint           // len的取值属性，剩余的元素数量
-	dataqsiz uint           // cap的取值对象，循环队列长度，可存放的元素个数
+	qcount   uint           // len函数的取值属性，剩余的元素数量
+	dataqsiz uint           // cap函数的取值对象，循环队列长度，可存放的元素个数
 	buf      unsafe.Pointer // 循环队列指针
   
 	elemsize uint16					// 每个元素的大小

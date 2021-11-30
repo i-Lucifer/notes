@@ -80,7 +80,8 @@ type Blob struct{
 ```go
 type Repo struct{
   Name	  string  // 仓库名 子模块名
-	Url			string	// 仓库地址 子仓库地址
+	Path	  string	// 仓库地址 子仓库在主仓库里的地址
+	Url			string	// 仓库地址 子仓库远程地址
   CurMd5	string	// 仓库版本 子仓库版本
   SubRepo []Repo
 }
