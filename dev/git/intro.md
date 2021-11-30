@@ -100,7 +100,7 @@
 git submodule add
 # 使用者
 git clone 主项目
-git submodule update --init --recursive   # 递归初始化
+git submodule update --init --recursive   # 递归初始化子模块
 git submodule update --recursive					# 递归更新
 git submodule update --remote							# 更新依赖 子项目
 ```
