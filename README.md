@@ -74,7 +74,7 @@ footer:
 
 
 ## 版本控制
-- [git](./dev/git/README.md)
+- [git](./dev/git/intro.md)
 
 ## 区块链
 - [区块链](./blockchain/README.md)
