@@ -2,28 +2,30 @@
 [[TOC]]
 
 ## 常用命令
-| 分类       | 作用        | git命令                  | svn命令                | 其他说明                                |
-| ---------- | ----------- | ------------------------ | ---------------------- | --------------------------------------- |
-| 初始化     | 初始化      | init                     | 服务器初始化           |                                         |
-|            | 克隆        | clone                    | checkout               |                                         |
-| 暂存提交   | 增          | add                      | 同                     |                                         |
-|            | 增          | commit                   | 同                     |                                         |
-|            | 删          | rm                       | delete                 |                                         |
-|            | 改          | reset                    |                        |                                         |
-| 历史与状态 | 查 状态     | status                   | 同                     |                                         |
-|            | 查 历史     | log                      | 同                     |                                         |
-|            | 查 对比差异 | diff                     |                        |                                         |
-|            | 查 查看代码 | show                     |                        |                                         |
-| 分支管理   | 增          | branch 新分支名          | copy -m "备注" /create |                                         |
-|            | 删          | branch -d 分支名         |                        |                                         |
-|            | 改 切换     | checkout或switch         |                        |                                         |
-|            | 改 合并     | merge 待合并分支         |                        | 两条线 有交织                           |
-|            | 改 合并     | rebase 待合并分支        |                        | 一条线 无交织                           |
-|            | 查          | branch -a                |                        | -a 时包含远程                           |
-| 团队协作   | 推送        | push                     |                        |                                         |
-|            | 更新        | fetch                    |                        | 只拉代码，不合并，vscode有自动fetch功能 |
-|            | 更新        | pull                     |                        | pull=fetch+merge                        |
-|            | 关联仓库    | remote add origin `地址` |                        | origin类似一个分支                      |
+| 分类       | 作用        | git命令                        | svn命令                | 其他说明                                |
+| ---------- | ----------- | ------------------------------ | ---------------------- | --------------------------------------- |
+| 初始化     | 初始化      | init                           | 服务器初始化           |                                         |
+|            | 克隆        | clone                          | checkout               |                                         |
+| 暂存提交   | 增          | add                            | 同                     |                                         |
+|            | 增          | commit                         | 同                     |                                         |
+|            | 删          | rm                             | delete                 |                                         |
+|            | 改          | reset                          |                        |                                         |
+|            |             |                                |                        |                                         |
+| 历史与状态 | 查 状态     | status                         | 同                     |                                         |
+|            | 查 历史     | log                            | 同                     |                                         |
+|            | 查 对比差异 | diff                           |                        |                                         |
+|            | 查 查看代码 | show                           |                        |                                         |
+| 分支管理   | 增          | branch 新分支名                | copy -m "备注" /create |                                         |
+|            | 删          | branch -d 分支名               |                        |                                         |
+|            | 改 切换     | checkout或switch               |                        |                                         |
+|            | 暂存状态    | <font color="red">state</font> |                        | checkout冲突时用                        |
+|            | 改 合并     | merge 待合并分支               |                        | 两条线 有交织                           |
+|            | 改 合并     | rebase 待合并分支              |                        | 一条线 无交织                           |
+|            | 查          | branch -a                      |                        | -a 时包含远程                           |
+| 团队协作   | 推送        | push                           |                        |                                         |
+|            | 更新        | fetch                          |                        | 只拉代码，不合并，vscode有自动fetch功能 |
+|            | 更新        | pull                           |                        | pull=fetch+merge                        |
+|            | 关联仓库    | remote add origin `地址`       |                        | origin类似一个分支                      |
 
 ## 扩展命令
 
